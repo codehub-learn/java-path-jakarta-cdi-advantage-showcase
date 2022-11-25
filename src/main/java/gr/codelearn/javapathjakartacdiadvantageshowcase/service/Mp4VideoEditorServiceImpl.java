@@ -4,11 +4,13 @@ import gr.codelearn.javapathjakartacdiadvantageshowcase.domain.Video;
 import jakarta.annotation.PostConstruct;
 import jakarta.annotation.PreDestroy;
 import jakarta.enterprise.context.ApplicationScoped;
+import jakarta.enterprise.inject.Default;
 import lombok.extern.slf4j.Slf4j;
 
 import java.math.BigDecimal;
 
 @ApplicationScoped
+@Default
 @Slf4j
 public class Mp4VideoEditorServiceImpl implements VideoEditorService {
     private Integer randomViews = (int) (Math.random() * 10_000) + 100;
